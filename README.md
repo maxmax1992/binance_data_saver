@@ -1,6 +1,6 @@
 # Binance stream data saver
 
-![Depth Managing Demo](assets/depth_managing_demo.gif)
+<img src="assets/depth_managing_demo.gif" width="50%" alt="Depth Managing Demo">
 *The animation shows 100 depth pairs that are maintained for ETHUSDT* and optionally saved (indexed by unix time)
 
 ### Saving logic:
