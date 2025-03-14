@@ -1,7 +1,9 @@
 # Binance stream data saver
 
-<img src="assets/depth_managing_demo.gif" width="50%" alt="Depth Managing Demo">
-*The animation shows 100 depth pairs that are maintained for ETHUSDT* and optionally saved (indexed by unix time)
+<div align="center">
+  <img src="assets/depth_managing_demo.gif" width="50%" alt="Depth Managing Demo">
+  <p><em>The animation shows 100 depth pairs that are maintained for ETHUSDT* and optionally saved (indexed by unix time)</em></p>
+</div>
 
 ### Saving logic:
 - Maintain depthbook for specific token and collect depth data
