@@ -1,0 +1,1 @@
+poetry run python -m binance_data_saver.main

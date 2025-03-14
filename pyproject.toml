@@ -1,0 +1,126 @@
+[tool.poetry]
+name = "binance-data-saver"
+version = "0.1.0"
+description = ""
+authors = ["Maxim Afteniy"]
+readme = "README.md"
+packages = [{include = "binance_data_saver"}]
+
+[tool.poetry.dependencies]
+python = "3.12.2"
+requests = "^2.28.2"
+numpy = "^1.24.2"
+matplotlib = "^3.7.1"
+sortedcontainers = "^2.4.0"
+pandas = "^2.0.0"
+seaborn = "^0.12.2"
+websocket-client = "^1.5.1"
+pyarrow = "^19.0.1"
+aiocsv = "^1.2.4"
+aiofiles = "^23.1.0"
+setuptools = "^67.7.1"
+python-binance = "^1.0.17"
+yapf = "^0.43.0"
+isort = "^5.12.0"
+pyyaml = "^6.0"
+black = {extras = ["jupyter"], version = "^23.3.0"}
+types-pyyaml = "^6.0.12.10"
+pylint = "^2.17.4"
+ipdb = "^0.13.13"
+scikit-learn = "^1.3.0"
+pytorch-forecasting = "^1.0.0"
+pydantic = "2.1.1"
+lightning = "^2.0.8"
+sspipe = "^0.1.17"
+s3fs = "^2023.10.0"
+binance = "^0.3"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.2"
+
+
+[tool.poetry.group.test.dependencies]
+respx = "^0.20.1"
+pytest-asyncio = "^0.21.0"
+trio = "^0.22.0"
+
+[tool.poetry.group.lint.dependencies]
+isort = "^5.12.0"
+black = "^23.3.0"
+flake8 = "^6.0.0"
+mypy = "^1.3.0"
+
+[tool.isort]
+profile = "black"
+
+[tool.pylint."MESSAGES CONTROL"]
+# Only show warnings with the listed confidence levels. Leave empty to show
+# all. Valid levels: HIGH, INFERENCE, INFERENCE_FAILURE, UNDEFINED.
+confidence = ''
+# Disable the message, report, category or checker with the given id(s). You
+# can either give multiple identifiers separated by comma (,) or put this
+# option multiple times (only on the command line, not in the configuration
+# file where it should appear only once). You can also use "--disable=all" to
+# disable everything first and then reenable specific checks. For example, if
+# you want to run only the similarities checker, you can use "--disable=all
+# --enable=similarities". If you want to run only the classes checker, but have
+# no Warning level messages displayed, use "--disable=all --enable=classes
+# --disable=W".
+disable = '''
+    C0116,
+'''
+
+[tool.mypy]
+# 3rd party import
+ignore_missing_imports = true
+# dynamic typing
+disallow_any_unimported = true
+disallow_any_expr = false
+disallow_any_decorated = false
+disallow_any_explicit = true
+disallow_any_generics = false
+disallow_subclassing_any = true
+# platform
+python_version = "3.12"
+# untyped
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_decorators = true
+# None and Optional
+no_implicit_optional = true
+# Warnings
+warn_return_any = false
+warn_unreachable = true
+# Misc
+pretty = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider" # deactivating pytest caching.
+
+# [tool.mypy]
+# plugins = [
+#   "pydantic.mypy"
+# ]
+# 
+# follow_imports = "silent"
+# warn_redundant_casts = true
+# warn_unused_ignores = true
+# disallow_any_generics = true
+# check_untyped_defs = true
+# no_implicit_reexport = true
+# 
+# # for strict mypy: (this is the tricky one :-))
+# disallow_untyped_defs = true
+# 
+# [tool.pydantic-mypy]
+# init_forbid_extra = true
+# init_typed = true
+# warn_required_dynamic_aliases = true
+# warn_untyped_fields = true

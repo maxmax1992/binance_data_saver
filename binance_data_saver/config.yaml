@@ -1,0 +1,12 @@
+n_depth_pairs: 100
+depth_update_rate: 100 # 1000 or 100
+compression_type: 'ZSTD' # valid values: 'NONE', 'SNAPPY', 'GZIP', 'BROTLI', 'LZ4', 'ZSTD'
+n_events_per_write: 100
+should_plot_depth: False
+sort_by_time: true
+n_ohlc_cols: 4
+n_trades_cols: 3
+trades_include_metadata: False
+save_dir: "data"
+# s3_bucket: "s3://eu-log-return-trader-data"
+s3_bucket: ""
