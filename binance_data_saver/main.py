@@ -54,10 +54,6 @@ def load_config():
     return config
 
 if __name__ == "__main__":
-    # TODO add argparse
-    # TODO add logging debug/info will print different things
-    # TODO initialize from yaml file
-    # TODO get the token info from envvars
     config = load_config()
     assert len(config) != 0, "Problem loading the config file"
 
@@ -65,7 +61,7 @@ if __name__ == "__main__":
     api_secret = None # os.environ["BINANCE_API_SECRET"]
 
     data_collector: CryptoTokenDataCollector = CryptoTokenDataCollector(
-        "ETHUSDT",
+        config['token'],
         api_key,
         api_secret,
         config,

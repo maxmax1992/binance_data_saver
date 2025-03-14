@@ -1,3 +1,4 @@
+token: ETHUSDT
 n_depth_pairs: 100
 depth_update_rate: 100 # 1000 or 100
 compression_type: 'ZSTD' # valid values: 'NONE', 'SNAPPY', 'GZIP', 'BROTLI', 'LZ4', 'ZSTD'
