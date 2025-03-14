@@ -1,4 +1,4 @@
-# Saving Binance stream data locally or to a s3 bucket
+# Binance stream data saver
 
 ### Saving logic:
 - Maintain depthbook for specific token and collect depth data
