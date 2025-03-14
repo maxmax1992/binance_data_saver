@@ -8,5 +8,4 @@ n_ohlc_cols: 4
 n_trades_cols: 3
 trades_include_metadata: False
 save_dir: "data"
-# s3_bucket: "s3://eu-log-return-trader-data"
 s3_bucket: ""
