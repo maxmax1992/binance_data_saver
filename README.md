@@ -1,5 +1,8 @@
 # Binance stream data saver
 
+![Depth Managing Demo](assets/depth_managing_demo.gif)
+*The animation shows 100 depth pairs that are maintained for ETHUSDT* and optionally saved (indexed by unix time)
+
 ### Saving logic:
 - Maintain depthbook for specific token and collect depth data
 - Receive trades and ohlc stream and save it as well  
