@@ -1,8 +1,8 @@
 token: ETHUSDT
-n_depth_pairs: 100
+n_depth_pairs: 50
 depth_update_rate: 100 # 1000 or 100
 compression_type: 'ZSTD' # valid values: 'NONE', 'SNAPPY', 'GZIP', 'BROTLI', 'LZ4', 'ZSTD'
-n_events_per_write: 100
+n_events_per_write: 5000
 should_plot_depth: False
 sort_by_time: true
 n_ohlc_cols: 4

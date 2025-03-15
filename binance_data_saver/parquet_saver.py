@@ -45,8 +45,8 @@ class ParquetSaver:
         self.time_to_row_data = SortedDict()
 
     def ohlc_cb(self, data):
-        logging.info("ohlc", data)
-        # #logging.info("len time_to_row_data", len(self.time_to_row_data))
+        # logging.info("ohlc", data)
+        # # #logging.info("len time_to_row_data", len(self.time_to_row_data))
         event_time = int(data['E'])
         data_ohlc = data['k']
         if event_time in self.time_to_row_data:
@@ -66,7 +66,7 @@ class ParquetSaver:
         self.check_if_should_parquet_export()
 
     def depth_cb(self, data):
-        logging.info("depth", data)
+        # logging.info("depth", data)
         event_time = int(data['E'])
         # logging.info("E", event_time)
         #logging.info("Time delta depth", get_time_delta(event_time))
@@ -84,7 +84,7 @@ class ParquetSaver:
         self.check_if_should_parquet_export()
 
     def agg_trades_cb(self, data):
-        logging.info("trades", data)
+        # logging.info("trades", data)
         event_time = int(data['E'])
         #logging.info("E", event_time)
         # logging.info(f"Time delta trades {int(data['m'])}")
