@@ -21,6 +21,7 @@ s3fs = "^2023.10.0"
 binance = "^0.3"
 pyyaml = "^6.0.2"
 websocket-client = "^1.8.0"
+python-binance = "^1.0.28"
 
 
 [tool.poetry.group.dev.dependencies]
